@@ -22,9 +22,7 @@ struct dram_para {
 	u8 bus_width;
 	u8 dual_rank;
 	u8 row_bits;
-#ifdef CONFIG_SUNXI_H3_DRAM_DDR2
 	u8 bank_bits;
-#endif
 };
 
 static inline int ns_to_t(int nanoseconds)
