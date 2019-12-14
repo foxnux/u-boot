@@ -306,7 +306,7 @@ extern int soft_i2c_gpio_scl;
 #if !defined(CONFIG_MACH_SUN8I_V3S) && !defined(CONFIG_MACH_SUN8I_S3)
 #define CONFIG_SUNXI_MAX_FB_SIZE (16 << 20)
 #else
-#define CONFIG_SUNXI_MAX_FB_SIZE (2 << 20)
+#define CONFIG_SUNXI_MAX_FB_SIZE (3 << 20)
 #endif
 
 /* Do we want to initialize a simple FB? */

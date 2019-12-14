@@ -927,7 +927,11 @@ static void sunxi_lcdc_tcon0_mode_set(const struct ctfb_res_modes *mode,
 			continue; /* These pins are not LCD */
 		sunxi_gpio_set_cfgpin(pin, SUN8I_V3S_GPE_LCD);
 	}
-#endif /* !CONFIG_MACH_SUN8I_V3S */
+#elif defined CONFIG_MACH_SUN8I_S3
+	for (pin = SUNXI_GPD(0); pin <= SUNXI_GPD(21); pin++) {
+		sunxi_gpio_set_cfgpin(pin, SUNXI_GPD_LCD0);
+	    }
+#endif
 
 	sunxi_lcdc_pll_set(0, mode->pixclock_khz, &clk_div, &clk_double);
 
