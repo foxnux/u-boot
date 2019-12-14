@@ -46,7 +46,7 @@
 
 / {
 	model = "FoxNux One";
-	compatible = "licheepi,licheepi-zero", "allwinner,sun8i-v3s";
+	compatible = "licheepi,licheepi-zero", "allwinner,sun8i-s3";
 
 	aliases {
 		serial0 = &uart0;
