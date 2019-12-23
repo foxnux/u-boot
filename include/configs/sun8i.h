@@ -27,6 +27,9 @@
 	#define CONFIG_SUNXI_USB_PHYS	2
 #endif
 
+#define CONFIG_VIDEO_LOGO
+#define CONFIG_VIDEO_BMP_LOGO
+
 /*
  * Include common sunxi configuration where most the settings are
  */
