@@ -212,17 +212,10 @@ static int __abortboot(int bootdelay)
 {
 	int abort = 0;
 	unsigned long ts;
-	int garbage_cnt=0;
 
 #ifdef CONFIG_MENUPROMPT
 	printf(CONFIG_MENUPROMPT);
 #else
-	udelay(2000000);
-	while (tstc()) {   /* flush garbage in UART RX buffer  */
-                (void) getc();  /* consume input */
-		printf("garbage#= %2d \n", garbage_cnt++);
-		if(garbage_cnt>100) break;
-	}
 	printf("\nHit any key to stop autoboot: %2d ", bootdelay);
 #endif
 
